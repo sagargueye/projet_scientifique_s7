@@ -1,0 +1,200 @@
+intensity =4 ; 
+function init() {
+
+    const CPELyon = {
+        lat: 45.729566,
+        lng: 4.827962
+    }
+
+
+    const zoomLevel = 6;
+
+
+    const map = L.map('mapid').setView([CPELyon.lat, CPELyon.lng], zoomLevel);
+     
+               
+
+   /*var flammeI = L.icon({
+        iconUrl: 'images/flamme.jpg',
+        iconSize:     [40, 40],
+        shadowSize:   [50, 64],
+        iconAnchor:   [22, 94],
+        shadowAnchor: [4, 62],
+        popupAnchor:  [-3, -76]
+    });
+
+var flammeMarquer =  L.marker([CPELyon.lat, CPELyon.lng], {icon: flammeI}).addTo(map);
+ */
+    
+    
+     /*   var circle = L.circle([45.729566, 4.827962], {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.5,
+                radius: 50
+            })
+          var marker = L.marker([CPELyon.lat, CPELyon.lng], {
+                title: "CPE Lyon", 
+            });
+            marker.bindPopup("<b>Lieu Incendie </b><br>latitue : 45.729566, longitude: 4.827962"  );
+            
+            var location = L.layerGroup([circle, marker]);
+            location.addTo(map);*/
+
+    
+    /****************   Layers(Fond de maps)    **************/
+    
+    /* wikimedia*/
+    const mainLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoibWthYmEiLCJhIjoiY2tqNjg2bmtmMXZvZTJybGd3d2NlMGZldCJ9.bIm7cZwOxYnWn1GAHR0cNQ'
+    });
+    
+    /* OpenStreeMap */
+    const omsLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+           maxZoom: 19,
+           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+    
+    /* stadia */
+    
+    const Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+       maxZoom: 20,
+       attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a  href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+});
+
+    /* Fond de Map par defaut*/
+    mainLayer.addTo(map);
+    
+    /* On va ajouter un controle layers pour pouoir switcher d'une map à l'autre, ce sera plus propre*/
+    L.control.layers({
+       'Main': mainLayer,
+       'OMS Layer': omsLayer,
+       'Stadia AlidadeSmoothDark': Stadia_AlidadeSmoothDark
+        
+    }).addTo(map);
+  
+tab= [45.7627835, 4.8439261];
+
+
+var simulateurButton = L.control({position: 'topleft'});
+            
+        // Creation du boutton de simulation, qui fait appel à ajax pour une requette vers le web service
+            simulateurButton.onAdd = (mapRef) => {
+                var button = L.DomUtil.create('button', 'geoloc-button')
+                    button.innerHTML = 'Simuler incendie';
+                
+                button.onclick = () => {
+
+                        var xhttp = new XMLHttpRequest();
+                            xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    
+                                    //Ici la reponse à la requette ajax doit etre au format d'un tableau de float contenant les coordonées où declancher l'incendie
+                                   // coordonnee = this.responseText;
+                                   coordonnee = tab;
+
+                                }
+                                else {
+                                    coordonnee = tab; 
+                                }
+                            };
+                    
+                    // Remplacer le text.txt par l'url du web service
+                        xhttp.open("GET", "text.txt", true);
+                        xhttp.send();
+  
+                     map.setView(coordonnee, 16);
+                     L.circle(coordonnee, 20).addTo(mapRef).bindPopup('Alerte Incendie').openPopup()
+            
+                    var marker = L.marker(coordonnee, {
+                        title: "CPE Lyon", 
+                    });
+                    marker.bindPopup('latitue : 45.729566, longitude: 4.827962');
+                    
+                    var location = L.layerGroup([circle, marker]);
+                    location.addTo(map);
+         
+                }
+                        return button;
+                
+            }
+            
+            simulateurButton.addTo(map);
+            
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tab= [45.7627835, 4.8439261];
+var simulateurButton = L.control({position: 'topleft'});
+            
+        // Creation du boutton de simulation, qui fait appel à ajax pour une requette vers le web service
+            simulateurButton.onAdd = (mapRef) => {
+                var button = L.DomUtil.create('button', 'geoloc-button')
+                    button.innerHTML = 'Simuler incendie';
+                
+                button.onclick = () => {
+
+                        var xhttp = new XMLHttpRequest();
+                            xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    
+                                    //Ici la reponse à la requette ajax doit etre au format d'un tableau de float contenant les coordonées où declancher l'incendie
+                                   // coordonnee = this.responseText;
+                                   coordonnee = tab;
+
+                                }
+                                else {
+                                    coordonnee = tab; 
+                                }
+                            };
+                    
+                    // Remplacer le text.txt par l'url du web service
+                        xhttp.open("GET", "text.txt", true);
+                        xhttp.send();
+  
+                     map.setView(coordonnee, 16);
+                /******************* Iconne Flamme ***************************/ 
+                var flammeI = L.icon({
+                    iconUrl: 'images/flamme.jpg',
+                    iconSize:     [40, 40],
+                    shadowSize:   [50, 64],
+                    iconAnchor:   [22, 94],
+                    shadowAnchor: [4, 62],
+                    popupAnchor:  [-3, -76]
+                });
+    L.marker(coordonnee, {icon: flammeI}).addTo(mapRef).bindPopup('Alerte Incendie').openPopup().addTo(map); 
+                }
+                        return button;
+                
+            }
+            
+            simulateurButton.addTo(map);
+             

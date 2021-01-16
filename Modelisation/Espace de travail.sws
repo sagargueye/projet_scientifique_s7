@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model ID="{1CD45C5D-3F79-4ABD-B0F6-5432CDBAFF60}" Loaded="No" Name="ModeleLogiqueDonnees_1" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="PowerAMC modèle logique de données.MLD"/>
+		<Model Expanded="Yes" ID="{F4F3AA21-97A9-41A5-A456-121B8B262C1B}" Name="diagramme de classe simulator" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="diagramme de classe.moo"/>
+		<Model Expanded="Yes" ID="{E4C378D4-8E78-4EB6-9719-258BC605EC3A}" Loaded="No" Name="diagramme de classe emergency" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="diagramme de classe emergency.moo"/>
+		<Model Expanded="Yes" ID="{160BACB7-3D54-4814-836E-05A4C63A8548}" Loaded="No" Name="diagramme de séquence emergency" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="diagramme de séquence emergency.moo"/>
+		<Model Expanded="Yes" ID="{DE10F5AC-B554-4365-B091-4C585D23989A}" Loaded="No" Name="diagramme_sequence_simulator" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="diagramme_sequence_simulator.moo"/>
+		<Model Expanded="Yes" ID="{DC3C9E10-94EF-462E-A0EA-3FD9B34458AF}" Loaded="No" Name="DS_SIMULATOR_INCENDIE" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DS_SIMULATOR_INCENDIE.moo"/>
+		<Model Expanded="Yes" ID="{DAA450BA-53CB-4BE4-A1D4-B6284583DDC1}" Loaded="No" Name="DS_deplacement_camion" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DS_deplacement_camion.moo"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>

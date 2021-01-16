@@ -1,0 +1,17 @@
+body{
+    background-color: #b3b3b4;
+    min-height: 100%;
+}
+html {
+    height: 100%;
+}
+
+#mapid {
+    height: 650px;
+    position: revert!important;
+}
+
+#map2id {
+    height: 650px;
+
+}

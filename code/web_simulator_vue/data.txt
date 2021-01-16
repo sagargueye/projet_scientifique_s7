@@ -1,0 +1,13 @@
+{
+    "0": {"id_incendie": 1, "intensite": 5, "debut_incendie": "2020-12-21T02:50:25", "fin_incendie": null, "latitude": 5.006238221068346, "longitude": 45.62114824385641, "id_intervention": null}, 
+    "1": {"id_incendie": 2, "intensite": 6, "debut_incendie": "2020-12-20T12:00:25", "fin_incendie": null, "latitude": 5.20419245773059, "longitude": 45.35983091284036, "id_intervention": null}, 
+    "2": {"id_incendie": 3, "intensite": 5, "debut_incendie": null, "fin_incendie": null, "latitude": 4.7222935637815215, "longitude": 45.36011563128426, "id_intervention": null},
+    "3": {"id_incendie": 4, "intensite": 3, "debut_incendie": "2021-01-08T01:12:15", "fin_incendie": null, "latitude": 4.872817835799227, "longitude": 45.694136173228635, "id_intervention": null}, 
+    "4": {"id_incendie": 5, "intensite": 9, "debut_incendie": "2021-01-08T01:23:32", "fin_incendie": null, "latitude": 4.802881447066068, "longitude": 45.54798688787465, "id_intervention": null}, 
+    "5": {"id_incendie": 6, "intensite": 8, "debut_incendie": "2021-01-08T01:24:46", "fin_incendie": null, "latitude": 4.949669676576552, "longitude": 45.50531003023839, "id_intervention": null}, 
+    "6": {"id_incendie": 7, "intensite": 5, "debut_incendie": "2021-01-08T01:27:47", "fin_incendie": null, "latitude": 4.703393391822629, "longitude": 45.81399298308156, "id_intervention": null}, 
+    "7": {"id_incendie": 8, "intensite": 3, "debut_incendie": "2021-01-09T14:08:36", "fin_incendie": null, "latitude": 5.188755033223685, "longitude": 45.743656038929025, "id_intervention": null},
+    "8": {"id_incendie": 9, "intensite": 3, "debut_incendie": "2021-01-09T14:11:08", "fin_incendie": null, "latitude": 4.836250060908882, "longitude": 45.45146890119579, "id_intervention": null},
+    "9": {"id_incendie": 10, "intensite": 5, "debut_incendie": "2021-01-09T14:11:13", "fin_incendie": null, "latitude": 4.609361467979643, "longitude": 45.59984271062904, "id_intervention": null},
+    "10": {"id_incendie": 11, "intensite": 3, "debut_incendie": "2021-01-09T14:11:18", "fin_incendie": null, "latitude": 4.823472967368374, "longitude": 45.63461373044905, "id_intervention": null}
+    }
